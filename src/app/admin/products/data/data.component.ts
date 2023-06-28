@@ -52,7 +52,7 @@ export class DataComponent {
     }
     
     disagree(){
-      Swal.fire(' Thank you see you again')
+      Swal.fire(' Thank you!!! see you again')
     }
     
    
