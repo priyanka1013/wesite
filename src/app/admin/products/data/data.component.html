@@ -1,0 +1,43 @@
+<mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>  
+</mat-card-header>
+<img src="{{item.VC_product_image}}">
+<mat-card-title class="font">{{item.name}}</mat-card-title>
+
+<mat-card-content *ngIf=" !showrequest" class="detail">
+    <h1 style="  margin: 17px;
+    margin-left: -2%;
+    font-size: 175%;
+    color: rgb(92, 162, 18);
+    font-weight: bold;">Details of {{item.VC_product_property_name}}</h1>
+    <p>
+        Name : {{item.VC_product_property_name}}<br><br>
+        Address: {{item.VC_product_address}}<br><br>
+        Price : {{item.VC_product_rent_amount}}<br><br>
+        Type : {{item.VC_product_type}}
+    </p>
+    <button class="button" (click)="request()"><span>Request </span></button>
+</mat-card-content>
+<mat-card-content *ngIf=" showrequest" class="agreement">
+    <h1  style="  margin: 17px;
+    margin-left: -2%;
+    font-size: 175%;
+    color: rgb(92, 162, 18);
+    font-weight: bold;">Agreement</h1>
+<h1 >Land-Lord Information</h1>
+    <p>{{item.VC_user_name}} agree to rent to the tenant the rental unit.</p>
+   
+   <br>
+   <br>
+   <h1>Rent Amount</h1>
+   <p>
+    The rent to be paid by the tenant to the landlord throughout the term of this agreement is Rs.{{item.VC_product_rent_amount}}/month
+   </p>
+   <br>
+   <h1>Security Deposit</h1>
+   <p>Rs. {{item.VC_product_security_deposit}}<br>
+This is Security Deposit may be use for the purpose of repairing damages for which the tenant is responsible</p>
+<div  >
+<button style=" margin: 10px; " type="button" class="btn btn-outline-success"(click)="agree()" >Agree</button>
+<button type="button" class="btn btn-outline-danger" (click)="disagree()">Disagree</button></div>
+</mat-card-content>

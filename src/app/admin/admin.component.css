@@ -1,0 +1,39 @@
+.navbar-brand {
+   font-size: 2rem;
+   color: #000;
+   font-family: 'Lobster', cursive;
+   margin-left: 52px;
+}
+
+.navbar-brand:hover {
+   color: black;
+}
+
+.nav-link {
+   margin-right: 10px;
+   margin-left: 10px;
+   color: black;
+   text-transform: uppercase;
+   font-family: 'Inter', cursive;
+}
+
+.nav-link:hover {
+   color: black;
+}
+
+
+.main {
+   margin-left: 59%;
+   z-index: 1;
+   position: absolute;
+  top:13%;
+   width: 590px;
+   height: 227px;
+   border-radius: 33px;
+   background-color: whitesmoke;
+}
+
+.btn {
+   margin-left: 148px;
+   font-size: 21px
+}

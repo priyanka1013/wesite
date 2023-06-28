@@ -1,0 +1,98 @@
+<!-- <mat-toolbar color="primary" class="mat-elevation-z8">
+    <button mat-icon-button routerLink="">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Mini Market</span>
+    <div>
+    <span class="space"></span>
+    <button mat-button routerLink="">Home</button>
+    <button mat-button routerLink="">Products</button>
+    <button mat-button routerLink="">Client reviews</button>
+   
+</div>  -->
+
+<nav class="navbar fixed-top navbar-expand-lg" style="   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1); background: #fff;" >
+  <div class="container">
+    <a class="navbar-brand" href="#">Mini Market</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a routerLink="/admin/home">
+            <button mat-button> <a class="nav-link active" href="#" routerLink="/admin/home">Home</a></button></a>
+        </li>
+        <li class="nav-item">
+          <button mat-button> <a class="nav-link" href="#" routerLink="/admin/about">About</a></button>
+        </li>
+        <li class="nav-item ">
+          <button mat-button> <a class="nav-link " href="#" routerLink="/admin/product">
+              Purchase
+            </a></button>
+
+        </li>
+        <li class="nav-item">
+          <button mat-button> <a class="nav-link" href="#" routerLink="/admin/review">Reviews</a></button>
+        </li>
+        <li class="nav-item">
+          <button mat-button> <a class="nav-link" href="#" routerLink="/admin/requesting">Requesting</a></button>
+        </li>
+
+
+      </ul>
+      <!-- <form class="d-flex" role="search">
+          <input class=" px-2 search" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn0" type="submit">Search</button>
+
+        </form>
+         -->
+
+    </div>
+
+  </div>
+  <div>
+    <img (click)="showme=!showme" style="height: 78px;
+ margin-left: 307px;
+    margin-top: -14px;
+    cursor: pointer;"
+      src="https://static.vecteezy.com/system/resources/thumbnails/007/907/337/small_2x/3d-user-profile-in-minimal-cartoon-style-free-vector.jpg">
+    <h1 style="    text-align: center;
+      
+    text-align: center;
+    margin-left: -37px;
+    margin-top: -53px;
+    font-weight: bolder;">welcome {{user.VC_user_name}} </h1>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+<div class="main" *ngIf="showme">
+  <div class="popup" id="popup">
+    <div class="overlay"></div>
+    <div class="content">
+
+    </div>
+    <br>
+    <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+    <br>
+    <br>
+    <h1 style="font-weight:bold; 
+        text-align: center;">Are You Leaving?</h1>
+
+    <p style="text-align: center;">Are you sure you want to Logout
+      ?As your unsave data will be lost.
+    </p>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+
+      <button class="btn" mat-button color="warn" (click)="showme=!showme">Cancel</button>
+      <button class="btn" style="color: rgb(16, 205, 16);" mat-button (click)="yes()">Yes</button>
+
+    </div>
+
+  </div>
+
+</div>

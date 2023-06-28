@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.hero{
+    height:100%;
+    width:100% ;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/004/708/960/original/abstract-green-background-green-and-white-simple-and-clean-background-vector.jpg);
+}
+.form-box{
+    width: 380px;
+    height: 460px;
+    position: relative;
+    margin: 6% auto;
+    /* background: rgb(115, 111, 111); */
+    padding:5px ;
+}
+.button-box{
+    width: 220px;
+    padding: 7px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px rgb(92, 162, 18);
+    border-radius: 30px;
+}
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    margin-right: 20px;
+    top: 0;
+    left: 0;
+  
+    width: 110px;
+    height: 100%;
+    background:rgb(26, 194, 26) ;
+    border-radius: 30px;
+ 
+}
+.btn2{
+    background: transparent;
+    border: 0;
+    outline: none;
+    margin-right: 24px;
+}
+
+
+.social-icons{
+    margin: 30px auto;
+    text-align: center;
+}
+.social-icons img{
+    width:30px;
+    margin: 0 12px;
+    box-shadow: 0 0 20px 0 #7f7f7f3d;
+    cursor: pointer;
+    border-radius:50%;
+}
+.input-group{
+    top: 180px;
+    position: absolute;
+width: 280px;
+transition: .5s;
+}
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin:5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+/* .submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    border: 0;
+    outline: none;
+    border-radius:30px ;
+    background:linear-gradient(to right,rgb(43, 233, 43),rgb(26, 194, 26)) ;
+} */
+.checkbox{
+    margin: 30px 10px 30px 0;
+
+}
+span{
+    color:#777 ;
+    font-size: 12px;
+    bottom: 68px;
+    margin-top: 26px;
+}
+
+#login{
+    left:50px;
+}
+#register{
+    left:50px;
+}
+
+.green-bg{
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    border: 0;
+    outline: none;
+    border-radius:30px ;
+    background:linear-gradient(to right,rgb(43, 233, 43),rgb(26, 194, 26)) ;
+}

@@ -1,0 +1,76 @@
+<div class="hero">
+    <div class="form-box">
+
+        <div class="button-box">
+            <button [class.toggle-btn]="!showme" [class.btn2]="showme" (click)="login()">Log in</button>
+            <button [class.toggle-btn]="showme" [class.btn2]="!showme" (click)="register()">Register</button>
+        </div>
+        <div class="social-icons">
+            <img src="https://www.cabriniclinic.org/wp-content/uploads/2014/02/facebook-icon.png">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png">
+            <img src="https://cdn-icons-png.flaticon.com/512/124/124021.png">
+        </div>
+        <form class="input-group" [formGroup]="login_data" id="login" *ngIf="!showme">
+            <input type="text" class="input-field" matInput formControlName="VC_user_email" placeholder="User email">
+            <!-- <mat-hint style="font-size:14px;"> you can use letters,numbers & periods</mat-hint> -->
+
+            <div style="color: red;"
+                *ngIf="!login_data.controls['VC_user_email'].valid && (login_data.controls['VC_user_email'].dirty || login_data.controls['VC_user_email'].touched)">
+                email is not valid
+            </div>
+            <input type="password" class="  input-field" formControlName="VC_user_password" placeholder="Enter password"
+                required>
+            <!-- <mat-hint style="font-size:14px;">you can use letters,numbers & symbols</mat-hint> -->
+            <div style="color: red;"
+                *ngIf="!login_data.controls['VC_user_password'].valid && (login_data.controls['VC_user_password'].dirty || login_data.controls['VC_user_password'].touched)">
+                password required</div>
+
+            <button (click)="storelogindata()" type="submit" style="width: 85%;
+            padding: 10px 30px;
+            cursor: pointer;
+            display: block;
+            margin: 29px;
+            border: 0;
+            outline: none;
+            border-radius:30px ;
+            background:rgb(43, 233, 43)" [disabled]="!login_data.valid">Log in</button>
+        </form>
+        <form [formGroup]="register_data" class="input-group" id="register" *ngIf="showme">
+            <input type="text" formControlName="VC_user_name" class="input-field" placeholder=" Enter user name"
+                required>
+            <div style="color: red;"
+                *ngIf="!register_data.controls['VC_user_name'].valid && (register_data.controls['VC_user_name'].dirty || register_data.controls['VC_user_name'].touched)">
+                username required
+            </div>
+            <input type="email" formControlName="VC_user_email" class="input-field" placeholder="Enter your email"
+                required>
+            <div style="color: red;"
+                *ngIf="!register_data.controls['VC_user_email'].valid && (register_data.controls['VC_user_email'].dirty || register_data.controls['VC_user_email'].touched)">
+                email is not valid
+            </div>
+            <input type="password" formControlName="VC_user_password" class="input-field" placeholder="Enter password"
+                required>
+            <div style="color: red;"
+                *ngIf="!register_data.controls['VC_user_password'].valid && (register_data.controls['VC_user_password'].dirty || register_data.controls['VC_user_password'].touched)">
+                password requires(maxlength=6)
+            </div>
+
+            <mat-radio-group aria-label="Select an option"formControlName="user_type" >
+                <mat-radio-button value="landlord">Landlord</mat-radio-button>
+                <mat-radio-button value="tenent">Tenent</mat-radio-button>
+            </mat-radio-group>
+            <button type="submit" style="width: 85%;
+                padding: 10px 30px;
+                cursor: pointer;
+                display: block;
+                margin: 29px;
+                border: 0;
+                outline: none;
+                border-radius:30px ;
+                background:rgb(26, 194, 26) ;"  [disabled]="!register_data.valid" (click)="register_detail()">Register
+            </button>
+        </form>
+
+    </div>
+
+</div>

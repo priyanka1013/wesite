@@ -1,0 +1,61 @@
+
+<h1 class="head"> Payment </h1>
+<form [formGroup]="payment_data">
+    <div>
+    <br>
+
+        <div class="form-group row">
+            <label style="font-size: 138%;" class="col-sm-2 col-form-label" > Today's Date:</label>
+            <div class="col-sm-10">
+                <input style="width: 391px; height: 48px;"  type="text" class="form-control"  formControlName="VC_date"
+              >    
+            </div>
+        </div>
+        <br>
+        <div class="form-group row">
+            <label style="font-size: 138%;" class="col-sm-2 col-form-label" > Enter name of Card :</label>
+            <div class="col-sm-10">
+                <input style="width: 391px; height: 48px;"  type="text" class="form-control"  formControlName="VC_card_name"
+                 placeholder="your card name ">
+            </div>
+        </div>              
+        <br>
+        
+        <br>
+        <div class="form-group row">
+            <label style="font-size: 138%;" class="col-sm-2 col-form-label"> Type of Payment :</label>
+            <div class="col-sm-10">
+                <input style="width: 391px; height: 48px;"  type="text" class="form-control"  formControlName="VC_payment_type"
+                 placeholder="Payment mode ">
+            </div>
+        </div>
+        <br>
+        <div class="form-group row">
+            <label style="font-size: 138%;" class="col-sm-2 col-form-label" > Card number :</label>
+            <div class="col-sm-10">
+                <input style="width: 391px; height: 48px;"  type="number" class="form-control" formControlName="VC_card_number"
+                 placeholder="................. ">
+            </div>
+        </div>
+        <br>
+        <div class="form-group row">
+            <label style="font-size: 138%;" class="col-sm-2 col-form-label" > Expiry Date:</label>
+            <div class="col-sm-10">
+                <input style="width: 391px; height: 48px;" formControlName="VC_expiry_date"      class="form-control" 
+                 placeholder="### ">
+            </div>
+        </div>
+        <br>
+        <div class="form-group row">
+            <label style="font-size: 138%;" class="col-sm-2 col-form-label" >Security code :</label>
+            <div class="col-sm-10">
+                <input style="width: 391px; height: 48px;"  type="number" class="form-control" formControlName="VC_security_code"
+                 placeholder=".......">
+            </div>
+        </div>
+        
+        <br>
+        <button  style=" margin-left: 45%;" type="button" class="btn btn-outline-success" (click)="payment_detail()">confirm  Payment</button>
+    </div>  
+</form>
+

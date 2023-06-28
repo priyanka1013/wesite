@@ -1,0 +1,51 @@
+.example-card{
+    margin-top: 50px;
+}
+    .mat-card-image{height: 302px; 
+        width: auto;
+        margin-left: 50px;} 
+
+.img:hover{
+    transform: scale(1.1);
+}
+.btnn{position: relative;
+    width: 200px;
+    height: 60px;
+    background:  rgba(46, 45, 45, 0.35);
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 153px;
+    color: black;
+        margin-left: 12px;
+    font-weight: bolder;
+    text-decoration: none;
+    letter-spacing: 2px;
+    border-top: 0.5px solid rgba(255,255,255,0.35);
+    border-left: 0.5px solid rgba(255,255,255,0.35);
+    padding-left: 40px;
+    transition: 0.5s;
+    }
+    .btnn:hover{
+        padding-left: 0px;
+        padding-right: 40px;
+        color: black;
+        background:  rgba(46, 45, 45, 0.35);
+    }
+    .btnn span{
+        position: absolute;
+        left: 5px;
+        width:50px;
+        height: 50px;
+        background: rgb(117, 185, 14);
+        border-radius: 50%;
+        transition: 0.5s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font: size 1.5em;
+    }
+    .btnn:hover span{
+        left:calc(100% - 55px);
+    }

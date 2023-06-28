@@ -1,0 +1,85 @@
+<!-- For Tenent -->
+<div class="row" *ngIf="this.user.VC_user_type == 'tenent'">
+    <div class="container shadow min-vh-100 py-4">
+        <div class="col-md-5 mx-auto">
+
+            <div class="input-group">
+                <input style="margin-top: 12%;
+                height: 68px;" class="form-control border-end-0 border rounded-pill" type="search"
+                    [(ngModel)]="searchKeyword" id="example-search-input">
+                <span class="input-group-append">
+                    <button type="button" style=" margin-top: 80%;" (click)="getdata()"
+                        class="btn btn-light">Search</button>
+                    <button type="button" style="margin-top: 83%;" (click)="cleardata()" class="btn btn-light">
+                        clear</button>
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div *ngFor="let item of productlist" class="col-sm-3">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+
+                    </mat-card-header>
+                    <img style="height: 302px;" mat-card-image src="{{item.VC_product_image}}">
+                    <mat-card-title
+                        style="color: rgb(92, 162, 18); text-align: center;">{{item.VC_product_property_name}}</mat-card-title>
+                    <mat-card-content>
+                        <p>
+                            Address : {{item.VC_product_address}}
+                        </p>
+                        <br>
+                        <p>
+                            Landlord name : {{item.VC_user_name}}
+                        </p>
+                        <button (click)=" opendialog(item)" class="btnn">See
+                            Details<span><mat-icon>arrow_right_alt</mat-icon></span></button>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- For LandLord -->
+
+<div class="row" *ngIf="this.user.VC_user_type == 'landlord'">
+    <div class="card">
+        <br><br><br><br>
+        <div class="card-body">
+
+            <button (click)=" openbox()" style="    margin-left: 617px;    width: 249px;" class="btnn">Add New
+                Property <span><mat-icon>arrow_right_alt</mat-icon></span></button>
+        </div>
+    </div>
+
+    <div *ngFor="let item of productlist" class="col-sm-3">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+
+            </mat-card-header>
+            <img style="height: 302px;" mat-card-image src="{{item.VC_product_image}}">
+            <mat-card-title
+                style="color: rgb(92, 162, 18); text-align: center;">{{item.VC_product_property_name}}</mat-card-title>
+            <mat-card-content>
+                <p>
+                    {{item.VC_product_address}}
+                </p>
+                <br>
+
+                <button type="button" style="margin-left: 35px;width: 114px;" (click)=" openedit(item)"
+                    class="btn btn-outline-success"><i style="    font-size: 17px" class="material-icons">edit</i>Edit
+                </button>
+                <!-- <button  (click)=" openedit(item)" mat-raised-button >Edit</button> -->
+
+                <button type="button" style="margin-left: 132px;width: 125px;" (click)=" deletet(item)"
+                    class="btn btn-outline-danger"><i style="    font-size: 17px"
+                        class="material-icons">delete</i>Delete</button>
+
+            </mat-card-content>
+
+        </mat-card>
+    </div>
+</div>

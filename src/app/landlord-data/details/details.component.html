@@ -1,0 +1,68 @@
+<DIV class="form ">
+    <mat-card>
+        <mat-card-content class="Property">Add New Property</mat-card-content>
+    </mat-card>
+    <br>
+    <form [formGroup]="add_detail">
+        <div>
+
+            <br>
+            <div class="form-group row">
+                <label style="font-size: 138%;" class="col-sm-2 col-form-label"> Property Name:</label>
+                <div class="col-sm-10">
+                    <input style="width: 391px; height: 48px;" formControlName="VC_product_property_name" type="text"
+                        class="form-control" id="inputEmail3" placeholder="Enter the property name">
+                </div>
+            </div>
+            <br>
+            <div class="form-group row">
+                <label style="font-size: 138%;" class="col-sm-2 col-form-label">Address:</label>
+                <div class="col-sm-10">
+                    <input style="width: 391px; height: 48px;" formControlName="VC_product_address" type="email"
+                        class="form-control" id="inputEmail3" placeholder="Enter the Address">
+                </div>
+            </div>
+            <br>
+            <div class="form-group row">
+                <label style="font-size: 138%;" class="col-sm-2 col-form-label">Price:</label>
+                <div class="col-sm-10">
+                    <input style="width: 391px; height: 48px;" formControlName="VC_product_rent_amount" type="number"
+                        class="form-control" id="inputEmail3" placeholder="Price">
+                </div>
+            </div>
+            <BR>
+            <div class="form-group row">
+                <label style="font-size: 138%;" class="col-sm-2 col-form-label">Type:</label>
+                <div class="col-sm-10">
+                    <mat-radio-group aria-label="Select an option" formControlName="VC_product_type">
+                        <mat-radio-button value="1BHK">1BHK </mat-radio-button>
+                        <mat-radio-button value="2BHK">2 BHK</mat-radio-button>
+                        <mat-radio-button value="3BHK">3 BHK</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+            <br>
+            <div class="form-group row">
+                <label style="font-size: 138%;" class="col-sm-2 col-form-label">security deposit:</label>
+                <div class="col-sm-10">
+                    <input style="width: 391px; height: 48px;" formControlName="VC_product_security_deposit"
+                        type="email" class="form-control" id="inputEmail3" placeholder="security deposit amount">
+                </div>
+            </div>
+            <BR>
+            <div class="form-group row">
+                <label style="font-size: 138%;" class="col-sm-2 col-form-label">Image:</label>
+                <div class="col-sm-10">
+                    <input style="width: 391px; height: 48px;" formControlName="VC_product_image" type="email"
+                        class="form-control" id="inputEmail3" placeholder="add link of property image">
+                </div>
+            </div>
+
+            <br>
+
+            <button style="margin-left: 34%;" type="button" class="btn btn-success" (click)="purchases_detail()">Add
+                Property</button>
+
+        </div>
+    </form>
+</DIV>

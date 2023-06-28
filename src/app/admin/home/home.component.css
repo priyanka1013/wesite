@@ -1,0 +1,60 @@
+.circle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(92, 162, 18);
+    clip-path: circle(364px at left -84px);
+    z-index: -1;
+}
+
+.circles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(92, 162, 18);
+    clip-path: circle(350px at right 800px);
+    z-index: -1;
+}
+
+.heading {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 68px;
+    margin-left: 498px;
+    margin-top: 181px;
+    animation: text 3s 1;
+}
+
+.heading2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 51px;
+    margin-left: 578px;
+    margin-top: 47px;
+    color: rgb(92, 162, 18);
+    animation: text 3s 1;
+}
+@keyframes text {
+    0% {
+        color: white;
+        margin-left: -20px;
+    }
+}
+
+.img {
+    height: 61%;
+    margin-top: 5%;
+}
+
+.head {
+    margin-top: -28%;
+    margin-left: 50%;
+    font-size: 52px;
+}
+
+.paragraph {
+    margin-left: 37%;
+    font-size: 16px;
+}

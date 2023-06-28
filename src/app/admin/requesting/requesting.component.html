@@ -1,0 +1,46 @@
+<!-- For Tenent -->
+<div class="row" *ngIf="this.user.VC_user_type == 'tenent'">
+    <div class="input-group">
+        <div class="row">
+            <div *ngFor="let item of data" class="col-sm-3">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                    </mat-card-header>
+                    <img style="height: 302px;" mat-card-image src="{{item.VC_product_image}}">
+                    <mat-card-title
+                        style="color: rgb(92, 162, 18); text-align: center;">{{item.VC_product_property_name}}</mat-card-title>
+                    <mat-card-content>
+                        <p> Address : {{item.VC_product_address}}</p>
+
+                        <p> Type : {{item.VC_product_type}}</p>
+                    </mat-card-content>
+                    <button type="button" (click)=" opendialog()" class="btn btn-warning">Payment</button>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- For LandLord -->
+
+<div class="row" *ngIf="this.user.VC_user_type == 'landlord'">
+
+    <div class="row">
+        <div *ngFor="let item of data" class="col-sm-3">
+            <mat-card class="example-card">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                </mat-card-header>
+                <img style="height: 302px;" mat-card-image src="{{item.VC_product_image}}">
+                <mat-card-title
+                    style="color: rgb(92, 162, 18); text-align: center;">{{item.VC_product_property_name}}</mat-card-title>
+                <mat-card-content>
+                    <p> Address : {{item.VC_product_address}}</p>
+                    <p>Tenent Name : {{item.VC_user_name}}</p>
+                    <p> Type : {{item.VC_product_type}}</p>
+                </mat-card-content>
+
+            </mat-card>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,81 @@
+.img{
+    height: 22%;
+    margin-left: 30%;
+    margin-top: -75%;
+  
+}
+.head{
+    font-size: 387%;
+    margin-left: 24%;
+}
+
+.circle{
+
+  position: sticky;
+    top: 0;
+    left: 0;
+width: 100%;
+height: 100%;
+background: rgb(92, 162, 18);
+clip-path: circle(364px at left -84px  );
+z-index: -1;
+}
+.example-card {
+    max-width: 400px;
+    margin-bottom: 8px;
+  }
+.heading{
+    margin-left: 54%;
+    font-size: 334%;
+    margin-top: -29%;
+    font-family: "Anton";
+    font-weight: bolder;
+}
+.paragraph{
+    margin-left: 53%;
+    margin-right: 3%;
+    font-size: 115%;
+}
+.img2{
+    margin-left: 12%;
+    margin-top: -19%;;
+}
+.users{
+    width: 60%;
+  margin: 11%;}
+  .col-md-4{
+    margin: 40px auto;
+  }
+  .profile{
+    padding: 70px 10px 10px;
+    background-color: #efefef;
+  }
+  .profile img{
+    top: 509px;
+    position: absolute;
+    left: calc(50% -50%);
+    border:10px solid white ;
+  }
+  .users{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+  .profile h3{
+    color:rgb(92, 162, 18);
+    font-size: 20px;
+    margin-top: 15px;
+  }
+  span{
+    font-size: 12px;
+    color: #333;
+  }
+  blockquote{
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .profile:hover{
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+  }
+
